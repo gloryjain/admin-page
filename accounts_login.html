@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="feed">
+  <div class="notpost">
+  	<div id='top-portion-border'>
+
+	    <form action="" method="post" enctype="multipart/form-data">
+	      <input type="text" name="email" placeholder="Username" class="log-in form-control" />
+	      <input type="password" name="password" placeholder="Password" class="log-in form-control"/>
+	      <input type="submit" class="log-in btn btn-primary" id='submit' value="Log In"/>
+	    </form>
+	</div>
+
+    <div class="account-center">
+        <div id="account-center-text">
+            Don't have an account?
+        </div>
+        <a href="{{ url_for('accounts.show_accounts_create') }}">Create an Account</a>
+    </div>
+
+
+  </div><!-- notpost -->
+</div><!-- feed -->
+{% endblock %}
